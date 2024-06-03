@@ -1,4 +1,4 @@
-# 05 Three.js基础之图元
+# 05 Three.js 基础之图元
 
 ## 图元(Primitives)介绍
 
@@ -20,8 +20,6 @@ Primitive 的复数即为 Primitives。
 
 > 在本文后面的一些文章中，也会将图元称呼为几何体。
 
-
-
 <br>
 
 <br>
@@ -42,8 +40,6 @@ Primitive 的复数即为 Primitives。
 >
 > 在管线渲染流程中，顶点处理模块的作用就是负责将顶点进行坐标转换。
 
-
-
 <br>
 
 **图元**：由若干个顶点构成的一组数据，用于构建或描述某种 二维或三维物体。
@@ -57,15 +53,13 @@ Primitive 的复数即为 Primitives。
 > > 2 个顶点信息就可以表述出 1 个长方体？
 > > 没错的，你可以想象成 这 2 个点分别是长方体的 斜对角线上的 2 个点，例如在 three.js 中 包装盒 Box3 就只有 2 个点的信息：坐标最大的点、坐标最小的点
 >
-> 3个顶点，则可以表示出一个 三角形，同时 3 个点也可以表示出一个圆。
+> 3 个顶点，则可以表示出一个 三角形，同时 3 个点也可以表示出一个圆。
 >
 > > 至于为什么 3 个顶点 可以表示出一个圆，你可以自己搜索或脑补。
 
 > 请注意：图元依然为一堆顶点数据，而不是图像数据。
 
 > 再次补充：假设一个物体有一部分不在显示范围之内，那么 webgl 会通过 裁切体(由镜头视椎体决定的) 对物体进行裁切，只将需要渲染的部分进行渲染，而裁切得到的内容则会重新计算，得到一个新的图元。
-
-
 
 <br>
 
@@ -83,8 +77,6 @@ Primitive 的复数即为 Primitives。
 
    > 图像图元不可进行空间转换
 
-
-
 <br>
 
 几何图元 经过变换、投影、光栅化后，到达片元操作环节的。
@@ -95,15 +87,11 @@ Primitive 的复数即为 Primitives。
 
 > 当然还需要其他操作，例如光线反射等
 
-
-
 <br>
 
 而实际中，我们通常不会使用 “图像图元” 这个名词，而是使用 “纹理”。
 
 所以在本文或者一些常见的教程中，“图元” 往往都是指 “几何图元”。
-
-
 
 <br>
 
@@ -113,8 +101,6 @@ Primitive 的复数即为 Primitives。
 
 > 请注意：片元已经不再是顶点数据，而是图像数据了，只不过这些图像数据是为完全加工完成，可以最终显示在屏幕上的图像数据。
 
-
-
 <br>
 
 **图像**：由 片元 经过片元处理模块，得到的最终图像数据。就是 3D 渲染输出到屏幕上的显示结果。
@@ -122,8 +108,6 @@ Primitive 的复数即为 Primitives。
 > 片元数据经过处理，用来更新缓存帧 上的像素，最终 缓存帧 上的结果就是最终渲染出的图像。
 
 > 请注意：图像是由一个个像素构成。
-
-
 
 <br>
 
@@ -135,21 +119,15 @@ Primitive 的复数即为 Primitives。
 >
 > 一组相关的顶点数据才是图形学中的图元。
 
-
-
 <br>
 
 > 以上内容更新于 2021.07.20
 
 ---
 
-
-
-
-
 <br>
 
-## 3D模型的补充说明
+## 3D 模型的补充说明
 
 内置的图元，都是一些基础的形状，相对简单，但也可以组合成相对复杂的 3D 场景。
 
@@ -159,13 +137,9 @@ Primitive 的复数即为 Primitives。
 2. 将创建好的模型导出成模型文件，文件格式为 .obj 或 .gltf
 3. Three.js 加载模型文件，然后开始后续操作
 
-
-
 我们先不讨论如何导出或加载模型，那些会在后续操作中讲解。
 
 此刻还是回归到默认的 图元 学习中。
-
-
 
 ## 图元的种类
 
@@ -178,18 +152,18 @@ Primitive 的复数即为 Primitives。
 | 锥形(Cone)                   | ConeBufferGeometry、ConeGeometry                 |
 | 圆柱(Cylinder)               | CylinderBufferGeometry、CylinderGeometry         |
 | 十二面体(Dodecahedron)       | DodecahedronBufferGeometry、DodecahedronGeometry |
-| 受挤压的2D形状(Extrude)      | ExtrudeBufferGeometry、ExtrudeGeometry           |
+| 受挤压的 2D 形状(Extrude)    | ExtrudeBufferGeometry、ExtrudeGeometry           |
 | 二十面体(Icosahedron)        | IcosahedronBufferGeometry、IcosahedronGeometry   |
 | 由线旋转形成的形状(Lathe)    | LatheBufferGeometry、LatheGeometry               |
 | 八面体(Octahedron)           | OctahedronBufferGeometry、OctahedronGeometry     |
 | 由函数生成的形状(Parametric) | ParametricBufferGeometry、ParametriceGeometry    |
-| 2D平面矩形(Plane)            | PlaneBufferGeometry、PlaneGeometry               |
+| 2D 平面矩形(Plane)           | PlaneBufferGeometry、PlaneGeometry               |
 | 多面体(Polyhedron)           | PolyhedronBufferGeometry、PolyhedronGeometry     |
 | 环形/孔形(Ring)              | RingBufferGeometry、RingGeometry                 |
-| 2D形状(Shape)                | ShapeBufferGeometry、ShapeGeometry               |
+| 2D 形状(Shape)               | ShapeBufferGeometry、ShapeGeometry               |
 | 球体(Sphere)                 | SphereBufferGeometry、SphereGeometry             |
 | 四面体(Tetrahedron)          | TetrahedronBufferGeometry、TetrahedronGeometry   |
-| 3D文字(Text)                 | TextBufferGeometry、TextGeometry                 |
+| 3D 文字(Text)                | TextBufferGeometry、TextGeometry                 |
 | 环形体(Torus)                | TorusBufferGeometry、TorusGeometry               |
 | 环形结(TorusKnot)            | TorusKnotBufferGeometry、TorusKnotGeometry       |
 | 管道/管状(Tube)              | TubeBufferGeometry、TubeGeometry                 |
@@ -201,13 +175,9 @@ Primitive 的复数即为 Primitives。
 > 上面表格中关于图元的中文名字，有些是我根据含义自己编的，我已经尽量靠近英文原意。  
 > 不同文章或教程可能对同一图元的称呼略微不同。
 
-
-
 **不要被上面那么多图元吓到**，事实上他们并不复杂，并且多数情况下我们也用不到。
 
 当需要用到了，只需要去查阅 Three.js 文档即可。
-
-
 
 <br>
 
@@ -235,20 +205,18 @@ thetaLength — 圆柱底面圆扇区的中心角，通常被称为“θ”（�
 
 请注意最后的 2 个参数：
 
-1. thetaStart(默认值为0) 
-2. thetaLength(默认值为2*Pi)
+1. thetaStart(默认值为 0)
+2. thetaLength(默认值为 2\*Pi)
 
-也就是说，你不修改这 2 个默认值，**那么默认创建出的是一个完整的圆柱体**，但是假设你修改了这 2 个值，比如 将 thetaLength 修改成 0.3*Pi (54°)，那么最终将创建出一个 夹角为 54° 的**扇形**(体)。
+也就是说，你不修改这 2 个默认值，**那么默认创建出的是一个完整的圆柱体**，但是假设你修改了这 2 个值，比如 将 thetaLength 修改成 0.3\*Pi (54°)，那么最终将创建出一个 夹角为 54° 的**扇形**(体)。
 
-如果感兴趣，可以看一下我发布的这个项目，由数据生成3D饼图：https://github.com/puxiao/pie-3d
+如果感兴趣，可以看一下我发布的这个项目，由数据生成 3D 饼图：https://github.com/puxiao/pie-3d
 
 > 提醒：最好你在看完本系列教程后(不仅是本小节)，再去看上面提到的 pie-3d 。
 
 通过上面对 CylinderGeometry 的描述，我们可以知道 Three.js 默认自带的图元实际上是可以产生很多变化的，得到的不一定仅仅是图元的 "字面" 物体。
 
 > 以上内容更新于 2021.11.27
-
-
 
 <br>
 
@@ -258,21 +226,19 @@ thetaLength — 圆柱底面圆扇区的中心角，通常被称为“θ”（�
 
 **虽然 EdgesGeometry、WireframeGeometry 名字中并未出现 “Buffer”，但和其他所有包含 “Buffer” 字样的图元一样，他们都继承于 BufferGeometry。**
 
-| 差异之处                 | BufferGeometry | Geometry                                                     |
-| ------------------------ | -------------- | ------------------------------------------------------------ |
-| 运算、渲染所消耗的性能   | 快             | 慢                                                           |
-| GPU渲染                  | 支持           | 不支持，<br />需要 Three.js 内部转化为 BufferGeometry 后才支持 |
-| 修改灵活度、可自定义程度 | 不高           | 高                                                           |
-| 添加新顶点               | 不支持         | 支持                                                         |
+| 差异之处                 | BufferGeometry | Geometry                                                       |
+| ------------------------ | -------------- | -------------------------------------------------------------- |
+| 运算、渲染所消耗的性能   | 快             | 慢                                                             |
+| GPU 渲染                 | 支持           | 不支持，<br />需要 Three.js 内部转化为 BufferGeometry 后才支持 |
+| 修改灵活度、可自定义程度 | 不高           | 高                                                             |
+| 添加新顶点               | 不支持         | 支持                                                           |
 
 **简单来说就是：**
 
-* BufferGeometry 可自定义地方比较少，但性能高
-* Geometry 可自定义地方比较多，但性能低一些
+- BufferGeometry 可自定义地方比较少，但性能高
+- Geometry 可自定义地方比较多，但性能低一些
 
 > 所有的 Geometry 对象最终都会被 Three.js 转化为 BufferGeometry 对象，然后再进行渲染。
-
-
 
 <br>
 
@@ -294,7 +260,7 @@ thetaLength — 圆柱底面圆扇区的中心角，通常被称为“θ”（�
 
 即使看完全部的本教程，那么最多你也仅仅算是学会了个皮毛，简单入门而已，真正复杂难的是 图形学 中的一些知识点，例如 向量，矩阵，齐次坐标，点乘，叉乘，球极坐标，当然最复杂的莫过于 自定义渲染器(shader)。
 
-关于3D 技术栈，虽然不够严谨，但是大体上可以这样表述：**图形学(CG) > OpenGL > OpenGL ES 2.0 > WebGL > Three.js**
+关于 3D 技术栈，虽然不够严谨，但是大体上可以这样表述：**图形学(CG) > OpenGL > OpenGL ES 2.0 > WebGL > Three.js**
 
 所以 Three.js 仅仅是 web 3D 最基础，表层的知识技术栈，想要深入学习，你会发现这是一条几乎不到头的道路，学秃。
 
@@ -304,27 +270,27 @@ thetaLength — 圆柱底面圆扇区的中心角，通常被称为“θ”（�
 
 <br>
 
-#### BufferGeometry的重要知识点：position、normal、uv
+#### BufferGeometry 的重要知识点：position、normal、uv
 
 > 先普及个基础知识：在 3D 中 Vector3 既可以表示一个 三维坐标，也可以表示一个三维方向。
 
 一个完整的 BufferGeometry 是由若干个 点(Vector3) 构成的：
 
-> 上面提到的 点 准确说应该是 3维 点坐标，对应的是 Vector3 ：https://threejs.org/docs/index.html#api/zh/math/Vector3
+> 上面提到的 点 准确说应该是 3 维 点坐标，对应的是 Vector3 ：https://threejs.org/docs/index.html#api/zh/math/Vector3
 
 下面的知识实际上是针对 图形学 和 OpenGL 的。
 
-1. position：坐标(每个坐标就是一个 vector3，由 3 个数字组成)，所有的坐标就是组成该 BufferGeometry 的所有 点 的信息(对于底层的 BufferGeometry 而言 3维点的 (x,y,z) 坐标是分开存储值的)。
+1. position：坐标(每个坐标就是一个 vector3，由 3 个数字组成)，所有的坐标就是组成该 BufferGeometry 的所有 点 的信息(对于底层的 BufferGeometry 而言 3 维点的 (x,y,z) 坐标是分开存储值的)。
 
    > 这就是 Three.js 针对 webgl 进行的封装，实际上我们平时更多时候都使用的是 Vector3，而不是具体的 3 个值。
 
 2. normal：法线(每个法线就是一个 vector3，由 3 个数字组成)，用于存储每个 3D 坐标点的朝向，用于计算 反光。
 
-3. uv：纹理映射坐标(每个uv就是一个 vector2，由 2 个数字组成)，用于存储每个 3D 坐标点对应渲染纹理时对应的 位置点信息，用于计算 贴图。
+3. uv：纹理映射坐标(每个 uv 就是一个 vector2，由 2 个数字组成)，用于存储每个 3D 坐标点对应渲染纹理时对应的 位置点信息，用于计算 贴图。
 
    > 对于纹理而言，它都是 二维的平面，因此 uv 的值对应的是 Vector2，由 x,y 2 个坐标值组成，且每个值的取值范围都是 0 - 1。
    >
-   > 你可以简单把 0 - 1 理解成  0% - 100%，对应的是一个百分比的值。
+   > 你可以简单把 0 - 1 理解成 0% - 100%，对应的是一个百分比的值。
 
 通过上面的讲述，我们大致可以作出以下结论，如果我们自定义一个 BufferGeometry，那么：
 
@@ -332,30 +298,65 @@ thetaLength — 圆柱底面圆扇区的中心角，通常被称为“θ”（�
 
 1. 假设这个 BufferGeometry 不需要考虑 反光 和 纹理贴图，那么它只需要拥有(设置) positon 就可以了。
 
-   > this.setAttribute('position', new BufferAttribute(this._vertices, 3))
+   > this.setAttribute('position', new BufferAttribute(this.\_vertices, 3))
 
 2. 假设这个 BufferGeometry 需要考虑反光，但不需要考虑纹理贴图，那么它需要设置 postion 和 normal。
 
-   > this.setAttribute('position', new BufferAttribute(this._vertices, 3))
+   > this.setAttribute('position', new BufferAttribute(this.\_vertices, 3))
    >
-   > this.setAttribute('normal', new BufferAttribute(this._normals, 3))
+   > this.setAttribute('normal', new BufferAttribute(this.\_normals, 3))
 
 3. 假设这个 BufferGeometry 需要考虑反光和纹理贴图，那么它的 postion 、normal、uv 都需要设置。
 
-   > this.setAttribute('position', new BufferAttribute(this._vertices, 3))
+   > this.setAttribute('position', new BufferAttribute(this.\_vertices, 3))
    >
-   > this.setAttribute('normal', new BufferAttribute(this._normals, 3))
+   > this.setAttribute('normal', new BufferAttribute(this.\_normals, 3))
    >
-   > this.setAttribute('uv', new BufferAttribute(this._uvs, 2))
+   > this.setAttribute('uv', new BufferAttribute(this.\_uvs, 2))
 
-4. **特别强调，上面提到的 position 是一个 BufferGeomerty 所有点信息的集合，它并不是 Mesh(网格，3D物体) 的 位置信息。**
+4. **特别强调，上面提到的 position 是一个 BufferGeomerty 所有点信息的集合，它并不是 Mesh(网格，3D 物体) 的 位置信息。**
 
-如果你理解不了我说的这段话，完全没有关系，忽略这段我补充的知识点，我也是学习  Three.js 快 1 年后才明白的。对于现在的你而言不理解是正常的。
+如果你理解不了我说的这段话，完全没有关系，忽略这段我补充的知识点，我也是学习 Three.js 快 1 年后才明白的。对于现在的你而言不理解是正常的。
 
 忽略我上面的这段话，继续本教程后面的学习吧。
 
 > 以上内容更新于 2021.11.27
 
-
-
 图元理论上的知识就先讲到这里，在下一节中，会编写一些图元示例。
+
+##### 索引 Index
+
+- [几何体顶点索引数据](http://webgl3d.cn/pages/05b687/)
+
+一个面有四个点，2 个三角形组成，我们可以得知，三角形中有 2 个点是重合的，因此，索引数据是在不写重复顶点数据的时候，通过索引定位点的信息。
+
+如“几何体顶点索引数据”给出的例子，vertices 有 4 个顶点数据，indexes 有 6 个“逆时针”的索引数据（3 个为一组，可以组成一个三角面片），即索引“0 和 2”的数据重复使用。
+
+##### 法向量 Normal
+
+- [顶点法线数据](http://webgl3d.cn/pages/ff37d3/)
+
+法向量也是分为有索引和无索引两种情况，THREE 中一个顶点对应一个法向量，因此假如一个平面，有两个三角形组成，需要 6 个点，因此法向量也会有 6 个数据
+
+但是，存在索引的话，就只需要 4 个点，因此法向量也只有 4 个数据。
+
+##### Position、Face、UV 映射的关系
+
+详细参考这个文章，会更加清晰！！！
+
+- [three.js UV 映射简述](https://www.cnblogs.com/vadim-web/p/13517244.html)
+
+三角形(面)
+
+网格模型 Mesh 由多个三角形(面)拼接构成。使用网格模型 Mesh 渲染几何体 geometry，就是几何体所有顶点坐标三个为一组，构成一个三角形，多组顶点构成多个三角形，就可以用来模拟表示物体的表面。
+
+空间中一个三角形有正反两面，那么 Three.js 的规则是如何区分正反面的？非常简单，你的眼睛(相机)对着三角形的一个面，如果三个顶点的顺序是逆时针方向，该面视为正面，如果三个顶点的顺序是顺时针方向，该面视为反面。
+
+正面：逆时针
+反面：顺时针
+
+因此得知：
+1、三角形的三个顶点“逆时针”构成一个正面
+2、三个点的位置 Position（x,y,z）逆时针排序，对应贴图 Texture 的坐标（x,y,z）
+3、需要注意的是贴图坐标需要序列化为 0 到 1 的值
+4、并且贴图左下角是原点(0,0)，右上方为(1,1)
