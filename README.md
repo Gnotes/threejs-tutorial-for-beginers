@@ -1,21 +1,8 @@
-# threejs-tutorial
-
-从今天 2020年11月27日 开始学习和探索 Three.js 。  
-
-
-<br>
-<p align="center">
-<img src="https://raw.githubusercontent.com/puxiao/notes/master/imgs/wechat.jpg" alt="wechat.jpg"/>
-</p>
-
-
-<br>
-
-> 以下内容更新于 2021.04.16
+> Fork from [threejs-tutorial](https://github.com/puxiao/threejs-tutorial)
 
 **特别提醒：**
 
-本教程最开始使用的是 r123 版本，但是后来 Three.js  更新到 r125 版后，r125 中做了一些修改，将 Geometry 从核心类( core ) 中移除，转移到了 examples/jsm/deprecated/。
+本教程最开始使用的是 r123 版本，但是后来 Three.js 更新到 r125 版后，r125 中做了一些修改，将 Geometry 从核心类( core ) 中移除，转移到了 examples/jsm/deprecated/。
 
 > Geometry 类已被废弃，不建议继续使用
 
@@ -23,7 +10,7 @@
 
 但是文章中讲解的代码思路、原理、用法是不会有太大的差异。
 
-目前最新版本为 r127版本，所以...随着 Three.js 版本不断更新，本教程中的示例代码终会有过时的时候。
+目前最新版本为 r127 版本，所以...随着 Three.js 版本不断更新，本教程中的示例代码终会有过时的时候。
 
 对于某个具体的类，Three.js 官方文档都有详细的使用示例，可去官网文档查看最新的用法。
 
@@ -35,13 +22,9 @@
 
 > 以上内容更新于 2021.04.16
 
-
-
 <br>
 
 > 以下内容更新于 2021.05.22
-
-
 
 <br>
 
@@ -61,46 +44,39 @@
 
 > 只有真正了解 Three.js 的这 2 套坐标系，同时理解 Vector2(二维向量)、Vector3(三维向量)、Raycaster(光线投射)，才有可能晋级为 Three.js 空间高手。
 
-
-
 <br>
 
 我在学习的过程中也向 Three.js 官方提交了自己的 PR，贡献出自己一点点力量。
 
 1. PR [21409](https://github.com/mrdoob/three.js/pull/21409) 已获准在 r127 中合并
-2. PR  [21642](https://github.com/mrdoob/three.js/pull/21642) 已获准在 r128 中合并
-3. PR  [21687](https://github.com/mrdoob/three.js/pull/21687) 已获准在 r128中合并
-4. PR  [21729](https://github.com/mrdoob/three.js/pull/21729) 已获准在 r129中合并
+2. PR [21642](https://github.com/mrdoob/three.js/pull/21642) 已获准在 r128 中合并
+3. PR [21687](https://github.com/mrdoob/three.js/pull/21687) 已获准在 r128 中合并
+4. PR [21729](https://github.com/mrdoob/three.js/pull/21729) 已获准在 r129 中合并
 
 Three.js 官方维护人员非常热心和严谨。
 
 几乎每天都有新的 PR 被提交，感觉 Three.js 社区活力满满。
 
-
-
 > 以上内容更新于 2021.05.22
 
-
-
 <br>
-
 
 ## 我的学习资料
 
 我刚开始学习 three.js，目前主要看 Three.js 官方出的 教程 和文档：
 
-* [threejsfundamentals.org：官方教程](https://threejsfundamentals.org/threejs/lessons/zh_cn/) (该教程只有前几篇是有中文翻译的)
-* [threejs.org：官方中文文档](https://threejs.org/docs/index.html#manual/zh/introduction/Creating-a-scene)
+- [threejsfundamentals.org：官方教程](https://threejsfundamentals.org/threejs/lessons/zh_cn/) (该教程只有前几篇是有中文翻译的)
+- [threejs.org：官方中文文档](https://threejs.org/docs/index.html#manual/zh/introduction/Creating-a-scene)
 
 除此之外，还有其他几个值得推荐的、国内博主写的 Three.js 系列教程：
 
-* [wjceo.com：暮志未晚写的three.js教程](https://www.wjceo.com/blog/threejs/)
+- [wjceo.com：暮志未晚写的 three.js 教程](https://www.wjceo.com/blog/threejs/)
 
-* [hewebgl.com：Three.js基础教程](http://www.hewebgl.com/article/articledir/1)
+- [hewebgl.com：Three.js 基础教程](http://www.hewebgl.com/article/articledir/1)
 
-* [webgl3d.cn：Three.js教程](http://www.webgl3d.cn/Three.js/)
+- [webgl3d.cn：Three.js 教程](http://www.webgl3d.cn/Three.js/)
 
-* 强烈推荐看一下 [图解WebGL&Three.js工作原理](https://www.cnblogs.com/wanbo/p/6754066.html)
+- 强烈推荐看一下 [图解 WebGL&Three.js 工作原理](https://www.cnblogs.com/wanbo/p/6754066.html)
 
   > 可惜该作者近几年都没再更新 Three.js 相关文章。
 
@@ -117,11 +93,9 @@ Three.js 官方维护人员非常热心和严谨。
 2. 我会在以上教程、文档，以及我搜集到的其他相关教程基础上，来编写本系列 Three.js 教程。
 3. 我会以一个新手的视角，心路历程，来编写本系列 Three.js 教程。
 
-
-
 <br>
 
-## Three.js官方文档的补充说明
+## Three.js 官方文档的补充说明
 
 当 Three.js 每次版本迭代更新时，官方只负责维护 英文版 文档，中文版文档完全是靠网友业余时间友情翻译与维护的。
 
@@ -133,21 +107,17 @@ Three.js 官方维护人员非常热心和严谨。
 
 > https://threejs.org/docs/index.html#manual/en/introduction/Creating-a-scene
 
-
-
 <br>
 
 我曾经也翻译过好几处地方，提交 PR 也被并入，但是随着时间的推移，逐渐没有翻译的热情了。
 
 因为实在是太多，更新太频繁，没有那么多精力去搞文档。
 
-
-
 <br>
 
-## 关于国内有些Three.js示例中代码过时的补充说明
+## 关于国内有些 Three.js 示例中代码过时的补充说明
 
-我加了一些 Three.js 交流QQ群，经常有人在里面发一些问题，处在学习阶段的我，经常会去帮忙看一下。
+我加了一些 Three.js 交流 QQ 群，经常有人在里面发一些问题，处在学习阶段的我，经常会去帮忙看一下。
 
 > 看别人遇到的问题，也特别能够提高自己的一些所见所闻，知识面。
 
@@ -156,8 +126,6 @@ Three.js 官方维护人员非常热心和严谨。
 首先我会去官网文档中，查一下他们代码中用到的 类、属性、方法，但是很多时候根本查不到。
 
 这说明他们用的类，属性，方法已发生变更、修改、废弃等。
-
-
 
 <br>
 
@@ -171,8 +139,6 @@ Three.js 官方维护人员非常热心和严谨。
 
 至此，原因和结果都知道了，就很容易修复代码了。
 
-
-
 <br>
 
 总结一下，想把 Three.js 搞明白，一定要经常做以下 4 件事：
@@ -181,8 +147,6 @@ Three.js 官方维护人员非常热心和严谨。
 2. 去 Github 仓库看源码
 3. 去 `Pull requests` 中看最新或之前的 PR 改动
 4. 使用、查看源码过程中，发现可以改进的地方，勇敢、大胆得去提交 PR
-
-
 
 <br>
 
@@ -198,11 +162,9 @@ Three.js 官方维护人员非常热心和严谨。
 
 如果没有 3D 图形学相关知识，那么后期提升 Three.js 会比较困难。
 
-
-
 <br>
 
-**推荐的第1本书籍：《3D数学基础：图形和游戏开发(第2版)》**
+**推荐的第 1 本书籍：《3D 数学基础：图形和游戏开发(第 2 版)》**
 
 购买地址：http://product.dangdang.com/28552828.html
 
@@ -214,29 +176,23 @@ Three.js 官方维护人员非常热心和严谨。
 
 不要被书名中的 数学 二字吓到，书中的数据公式，根本不需要你去记忆。
 
-
-
 > 尽量在 当当或京东 做活动时候购买，比如 `5折` 或 `满100减50` 时购买，比较划算。
-
-
 
 <br>
 
-**推荐的第2本书籍：《基于WebGL的自顶向下方法(第七版)》**
+**推荐的第 2 本书籍：《基于 WebGL 的自顶向下方法(第七版)》**
 
 购买地址：http://product.dangdang.com/23933108.html
 
-这本书系统全面介绍了 基于 webgl 的 3D图形学知识体系。
+这本书系统全面介绍了 基于 webgl 的 3D 图形学知识体系。
 
 可以让你在大脑中快速构建出 3D 图形学的渲染概念。
 
 > 注意，是基于 webgl，而不是基于 three.js
 
-
-
 <br>
 
-**推荐的第3本书籍：虎书(第4版)**
+**推荐的第 3 本书籍：虎书(第 4 版)**
 
 第四版英文下载地址：
 
@@ -248,9 +204,7 @@ http://index-of.es/z0ro-Repository-2/Cyber/01%20-%20Computer%20Science/Fundament
 
 > 由于这本书的封面是一只老虎，所以这本书才被称为 “虎书”
 >
-> 这本书只有第2版有简体中文，不过第2版已经过时，第三版和第四版差别不是太大。
-
-
+> 这本书只有第 2 版有简体中文，不过第 2 版已经过时，第三版和第四版差别不是太大。
 
 <br>
 
@@ -262,19 +216,17 @@ http://index-of.es/z0ro-Repository-2/Cyber/01%20-%20Computer%20Science/Fundament
 >
 > 假设满星为 5 颗星
 
-1. 本人推荐指数 2 颗星：《深入理解OpenGL、WebGL 和 OpenGL ES》
+1. 本人推荐指数 2 颗星：《深入理解 OpenGL、WebGL 和 OpenGL ES》
 2. 本人推荐指数 1 颗星：《计算机图形学——几何体数据结构》
-3. 本人推荐指数 0 颗星：《3D图形系统设计与实现》
-
-
+3. 本人推荐指数 0 颗星：《3D 图形系统设计与实现》
 
 <br>
 
-## WebGL相关教程
+## WebGL 相关教程
 
 首先说明一下，如果学想对 Three.js 有更深层次的修炼，那么你一定要去学习一下 WebGL。
 
-> WebGL又分为：WebGL1、WebGL2
+> WebGL 又分为：WebGL1、WebGL2
 
 Three.js 本身就是针对 WebGL 的封装。
 
@@ -284,32 +236,28 @@ WebGL2 教程：https://webgl2fundamentals.org/webgl/lessons/zh_cn/
 
 **假设你不想学习 WebGL 也没有关系，直接学习 Three.js 也是完全没有问题的。**
 
-
-
 <br>
 
 ## 你还需要掌握的技术栈
 
-* **JS、ES6**
-* **CSS、SCSS**
-* **React、hooks**
-* **TypeScript**
-* **包管理工具Yarn 或 NPM**
+- **JS、ES6**
+- **CSS、SCSS**
+- **React、hooks**
+- **TypeScript**
+- **包管理工具 Yarn 或 NPM**
 
 以上是本系列文章使用的技术栈。
 
 若将来要将开发的项目发布到线上，你可能还需要掌握：
 
-* **Git 代码管理**
-* **Koa 创建简单web服务器**
-* **Nginx 配置静态服务器**
-* **Docker 创建容器服务**
-
-
+- **Git 代码管理**
+- **Koa 创建简单 web 服务器**
+- **Nginx 配置静态服务器**
+- **Docker 创建容器服务**
 
 <br>
 
-## 关于3D建模
+## 关于 3D 建模
 
 Three.js 内置了很多基础模型，也支持内部自定义图形。
 
@@ -329,19 +277,19 @@ Three.js 内置了很多基础模型，也支持内部自定义图形。
 
 因此，若想学好、用好 Three.js，你还需要掌握一门 3D 软件，我个人强烈推荐以下 2 个软件：
 
-**第1推荐(强烈推荐)：C4D**
+**第 1 推荐(强烈推荐)：C4D**
 
 优点：轻量级 3D 建模软件、支持简体中文、国内中文教程、资源非常多
 
-缺点：软件收费，当然你可以自己网上搜到 ** 版
+缺点：软件收费，当然你可以自己网上搜到 \*\* 版
 
-**第2推荐：Blender**
+**第 2 推荐：Blender**
 
 优点：开源免费、也属于轻量级
 
 缺点：国内使用人群数量较少，教程和资源较少
 
-**对于完全不懂3D软件的人来说，Windows 10 自带的 “画图 3D” 这个软件也是可以的。**
+**对于完全不懂 3D 软件的人来说，Windows 10 自带的 “画图 3D” 这个软件也是可以的。**
 
 <br>
 
@@ -353,13 +301,11 @@ Three.js 内置了很多基础模型，也支持内部自定义图形。
 
 > 例如：场景、网格、材质、灯光 等等。
 
-
-
 <br>
 
 ## 本教程的缺点
 
-#### 1、是Three.js教程，但不是Three.js文档
+#### 1、是 Three.js 教程，但不是 Three.js 文档
 
 我们只是从一个初学者的角度来讲解 Three.js，但是不会讲解每一个讲解对象、每一个类的全部属性或方法，如果想了解某个类的全部属性和方法，建议你直接去看 Three.js 的官方文档。
 
@@ -401,15 +347,11 @@ Three.js 内置了很多基础模型，也支持内部自定义图形。
 
 因为如果没有图形学知识作为基础，你很难完成复杂点的 Three.js 开发。
 
-
-
 <br>
 
 我现在正在学习图形学，只有掌握图形学后，才会更加容易理解 three.js 。
 
 > 尽管我目前也只是学习了图形学一点点基础的东西，但是此刻再回头去看 three.js 中的很多属性和方法，相对容易很多。
-
-
 
 <br>
 
@@ -418,8 +360,6 @@ Three.js 内置了很多基础模型，也支持内部自定义图形。
 **闫令琪：现代计算机图形学入门**
 
 https://www.bilibili.com/video/BV1X7411F744
-
-
 
 <br>
 
